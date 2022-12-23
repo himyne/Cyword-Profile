@@ -15,7 +15,6 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 .wrapper__header {
@@ -32,7 +31,7 @@ html, body {
 .header__title {
   display: flex;
   flex-direction: row;
-  align-items: center; /*세로 가운데 정렬*/
+  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -47,17 +46,25 @@ html, body {
   padding-left: 5px;
 }
 
+.wrapper__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .game__container {
-  width: 222px;
-  height: 168px;
-  border: 1px solid gray;
+  width: 33%;
+  height: 90%;
+  margin-top: 20px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px 15px 20px 15px;
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
 }
 
 .game__title {
@@ -66,10 +73,20 @@ html, body {
 }
 
 .game__subtitle {
-  font-size: 11px;
+  font-size: 9px;
+  text-align: center;
+}
+
+.result__title {
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .word__result {
+  overflow: auto;
+  text-align: center;
+  width: 130px;
+  height: 60px;
   font-size: 11px;
   font-weight: 700;
 }
@@ -78,20 +95,21 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .textbox {
-  width: 130px;
+  width: 85px;
   height: 24px;
   border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 11px;
 }
 
 .search {
-  font-size: 11px;
-  font-weight: 700;
-  width: 38px;
   height: 24px;
+  margin-left: 3px;
+  font-size: 5px;
 }
 
 .game__lotto__number {
@@ -119,4 +137,8 @@ html, body {
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.hidden {
+  display: none;
 }

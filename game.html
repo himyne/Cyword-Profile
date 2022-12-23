@@ -3,7 +3,6 @@
 <head>
   <title>Game</title>
   <link href="/styles/game.css" rel="stylesheet">
-  <script src="./game.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -14,7 +13,7 @@
       </div>
       <div class="divideLine"></div>
     </div>
-    <div class="game__container">
+    <!-- <div class="game__container">
       <img src="./images/word.png">
       <div class="game__title">끝말잇기</div>
       <div class="game__subtitle">제시어 : <span id="word">코드캠프</span></div>
@@ -23,21 +22,44 @@
         <button class="search" onclick="startWord()">입력</button>
       </div>
       <div id="result" class="word__result">결과</div>
-    </div>
+    </div> -->
+    <div class="wrapper__body">
     <div class="game__container">
       <img src="./images/lotto.png">
       <div class="game__title">LOTTO</div>
-      <div class="game__subtitle">버튼을 누르세요</div>
-      <div class="game__lotto__number">
-        <span>3</span>
-        <span>5</span>
-        <span>10</span>
-        <span>24</span>
-        <span>30</span>
-        <span>34</span>
+      <div class="game__subtitle">로또를 구입하세요 <br> 로또 1개 : 1000원</div>
+      <div class="word__text">
+        <input class="textbox" id="lottoAmount" placeholder="금액을 입력하세요">
+        <button class="search" onclick="lotto()">입력</button>
       </div>
-      <button class="game__lotto__button">추첨</button>
+      <div class="result__title">게임 결과</div>
+      <div id="lotto__result" class="word__result"></div>
+    </div>
+    <div class="game__container">
+      <img src="./images/baseball.png" width="34" height="36">
+      <div class="game__title">숫자 야구</div>
+      <div class="game__subtitle">중복되지 않는 3자리 숫자를 입력하세요!</div>
+      <div class="word__text">
+        <input class="textbox" id="userNumber" placeholder="ex) 359">
+        <button id = "submit" class="search">입력</button>
+      </div>
+      <div class="result__title">게임 결과</div>
+      <div id="result" class="word__result"></div>
+      <button id="restart__button" class="hidden">게임 재시작</button>
+    </div>
+    <div class="game__container">
+      <img src="./images/bridge.png" width="34" height="36">
+      <div class="game__title">다리 건너기</div>
+      <div class="game__subtitle">다리의 길이를 입력하세요.(길이는 3~20까지 가능)</div>
+      <div class="word__text">
+        <input class="textbox" id="bridgeSize" placeholder="다리 길이를 입력하세요">
+        <button class="search" id ="bridge__button">입력</button>
+      </div>
+      <div class="result__title">게임 결과</div>
+      <div id="bridge__result" class="word__result"></div>
     </div>
   </div>
+  </div>
 </body>
+<script type="module" src="/js/game.js"></script>
 </html>

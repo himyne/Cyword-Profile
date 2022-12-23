@@ -17,3 +17,4 @@ const menuGame = () => {
   document.getElementById("menuHome").style= "color: white: background-color: #298eb5"
   document.getElementById("menuJukebox").style= "color: white: background-color: #298eb5"
 }
+
