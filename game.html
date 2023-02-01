@@ -27,13 +27,15 @@
     <div class="game__container">
       <img src="./images/lotto.png">
       <div class="game__title">LOTTO</div>
-      <div class="game__subtitle">로또를 구입하세요 <br> 로또 1개 : 1000원</div>
+      <div class="game__subtitle" id="lotto__subtitle">로또를 구입하세요 <br> 로또 1개 : 1000원</div>
       <div class="word__text">
-        <input class="textbox" id="lottoAmount" placeholder="금액을 입력하세요">
-        <button class="search" onclick="lotto()">입력</button>
+        <input class="textbox" id="amount" placeholder="ex) 3000">
+        <input class="hidden" id="winning__number" placeholder="ex) 1,2,3,4,5,6">
+        <input class="hidden" id="bonus" placeholder="ex) 7">
+        <button id="lotto__submit" class="search">입력</button>
       </div>
       <div class="result__title">게임 결과</div>
-      <div id="lotto__result" class="word__result"></div>
+      <div id="lotto__result" class="result"></div>
     </div>
     <div class="game__container">
       <img src="./images/baseball.png" width="34" height="36">
@@ -44,7 +46,7 @@
         <button id = "submit" class="search">입력</button>
       </div>
       <div class="result__title">게임 결과</div>
-      <div id="result" class="word__result"></div>
+      <div id="result" class="result"></div>
       <button id="restart__button" class="hidden">게임 재시작</button>
     </div>
     <div class="game__container">
@@ -52,14 +54,15 @@
       <div class="game__title">다리 건너기</div>
       <div class="game__subtitle">다리의 길이를 입력하세요.(길이는 3~20까지 가능)</div>
       <div class="word__text">
-        <input class="textbox" id="bridgeSize" placeholder="다리 길이를 입력하세요">
+        <input class="textbox" id="bridgeSize" placeholder="ex) 5">
         <button class="search" id ="bridge__button">입력</button>
       </div>
       <div class="result__title">게임 결과</div>
-      <div id="bridge__result" class="word__result"></div>
+      <div id="bridge__result" class="result"></div>
     </div>
   </div>
   </div>
 </body>
-<script type="module" src="./js/game.js"></script>
+<script type="module" src="./js/baseballGame.js"></script>
+<script type="module" src="./js/lotto/lottoGame.js"></script>
 </html>

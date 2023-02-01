@@ -1,11 +1,7 @@
-
 import { makeComputerNumber } from "./random.js";
 import { Validation } from "./Validation.js";
+import { getElement } from "./util.js";
 
-const getElement = (id) => {
-  let element = document.getElementById(id);
-  return element;
-};
 
 export class Button {
   constructor() {
